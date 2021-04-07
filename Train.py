@@ -1,7 +1,6 @@
 from lib.Unet import UNet
 import tensorflow as tf
 import os
-from Config import tf_records_path, callbacks, batch_size, epochs, validation_split
 
 
 def _parse_single_data(X):
@@ -43,5 +42,7 @@ def train(tf_records_path, epochs=10, batch_size=64, validation_split=0.1, callb
     model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
     model.fit(train_data, epochs=epochs, callbacks=callbacks, validation_data=valid_data)
 
+
 if __name__ == "__main__":
+    from Config import tf_records_path, callbacks, batch_size, epochs, validation_split
     train(tf_records_path, epochs=epochs, batch_size=batch_size, callbacks=callbacks, validation_split=validation_split, metrics=["accuracy"])
