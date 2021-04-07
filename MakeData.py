@@ -40,7 +40,7 @@ def save(mask, img, save_dir, count=0):
         f.write(Image_Buffer.SerializeToString())
 
 
-def make_tf_record(mask_dir, image_dir, save_dir, img_size=(256, 256)):
+def make_unet_tfrecord(mask_dir, image_dir, save_dir, img_size=(256, 256)):
     count = 0
 
     init([mask_dir, image_dir, save_dir])
