@@ -30,7 +30,7 @@ def make_dataset(tf_records_path, batch_size=64, validation_split=0.1):
     return train_data, valid_data
 
 
-def train(tf_records_path, epochs=10, batch_size=64, validation_split=0.1, callbacks=None, loss='binary_crossentropy', optimizer='adam', metrics=None):
+def train_unet(tf_records_path, epochs=10, batch_size=64, validation_split=0.1, callbacks=None, loss='binary_crossentropy', optimizer='adam', metrics=None):
     if callbacks is None:
         callbacks = []
 
