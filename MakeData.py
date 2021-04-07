@@ -3,7 +3,6 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.asdftrain import BytesList, FloatList, Int64List
 from tensorflow.train import Feature, Features, Example
-from Config import mask_dir, tf_records_path, image_dir
 
 
 def init(paths):
@@ -70,5 +69,6 @@ def make_tf_record(mask_dir, image_dir, save_dir, img_size=(256, 256)):
 
 
 if __name__ == "__main__":
+    from Config import mask_dir, tf_records_path, image_dir
     print("Starting To Make TF-Record")
     make_tf_record(mask_dir, image_dir, tf_records_path)
