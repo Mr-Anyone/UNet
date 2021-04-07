@@ -1,7 +1,7 @@
 import os
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.asdftrain import BytesList, FloatList, Int64List
+from tensorflow.train import BytesList, FloatList, Int64List
 from tensorflow.train import Feature, Features, Example
 
 
